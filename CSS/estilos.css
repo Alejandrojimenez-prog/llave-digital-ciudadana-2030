@@ -1,0 +1,474 @@
+
+/* =====================================
+   LLAVE DIGITAL CIUDADANA 2030
+   Hoja de estilos principal
+   ===================================== */
+
+:root {
+    --azul: #123b68;
+    --azul-oscuro: #0b2545;
+    --azul-claro: #eaf2fb;
+    --turquesa: #087f8c;
+    --blanco: #ffffff;
+    --fondo: #f5f8fc;
+    --texto: #243449;
+    --texto-suave: #58677a;
+    --borde: #dce5ef;
+    --sombra: 0 8px 24px rgba(18, 59, 104, 0.08);
+    --radio: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--blanco);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--azul);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #e5a500;
+    outline-offset: 4px;
+}
+
+.contenedor {
+    width: min(1120px, 92%);
+    margin-inline: auto;
+}
+
+/* Encabezado */
+
+.encabezado {
+    background: var(--blanco);
+    border-bottom: 1px solid var(--borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.barra-navegacion {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--azul-oscuro);
+    line-height: 1.3;
+}
+
+.icono-marca {
+    font-size: 30px;
+}
+
+.marca strong,
+.marca small {
+    display: block;
+}
+
+.marca strong {
+    font-size: 17px;
+}
+
+.marca small {
+    font-size: 12px;
+    color: var(--texto-suave);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--turquesa);
+}
+
+/* Portada */
+
+.hero {
+    background: linear-gradient(125deg, #0b2545, #164f82);
+    color: var(--blanco);
+    padding: 88px 0 82px;
+}
+
+.hero-contenido {
+    max-width: 850px;
+}
+
+.etiqueta {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--turquesa);
+    margin-bottom: 12px;
+}
+
+.hero .etiqueta {
+    color: #a8e7e8;
+}
+
+.hero h1 {
+    max-width: 780px;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-contenido > p:not(.aviso) {
+    max-width: 690px;
+    font-size: 18px;
+    color: #e2edf8;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 2px solid var(--turquesa);
+    border-radius: 9px;
+    background: var(--turquesa);
+    color: var(--blanco);
+    text-decoration: none;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.boton:hover {
+    background: #066772;
+    border-color: #066772;
+    transform: translateY(-1px);
+}
+
+.aviso {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #d5e4f4;
+}
+
+/* Secciones */
+
+.seccion {
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+.encabezado-seccion {
+    max-width: 750px;
+    margin-bottom: 32px;
+}
+
+.encabezado-seccion h2 {
+    color: var(--azul-oscuro);
+    font-size: clamp(27px, 4vw, 36px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.encabezado-seccion p {
+    color: var(--texto-suave);
+}
+
+/* Buscador */
+
+.buscador {
+    background: var(--fondo);
+    padding: 24px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    margin-bottom: 30px;
+}
+
+.buscador label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.buscador-fila {
+    display: flex;
+    gap: 12px;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 15px;
+    background: var(--blanco);
+    border: 1px solid #aab9cb;
+    border-radius: 9px;
+    color: var(--texto);
+    font: inherit;
+}
+
+.boton-secundario {
+    background: var(--azul);
+    border-color: var(--azul);
+}
+
+#estadoBusqueda {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+/* Tarjetas de trámites */
+
+.rejilla-tramites {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta-tramite {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    min-width: 0;
+}
+
+.tarjeta-tramite h3 {
+    color: var(--azul);
+    font-size: 21px;
+    line-height: 1.35;
+    margin: 12px 0;
+}
+
+.tarjeta-tramite p {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.tarjeta-tramite .descripcion {
+    color: var(--texto-suave);
+}
+
+.tarjeta-tramite .detalle {
+    font-size: 14px;
+}
+
+.tarjeta-tramite .boton {
+    margin-top: auto;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.etiqueta-tramite {
+    display: inline-block;
+    background: var(--azul-claro);
+    color: var(--azul);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.mensaje-vacio {
+    grid-column: 1 / -1;
+    padding: 25px;
+    background: var(--fondo);
+    border-radius: var(--radio);
+}
+
+/* Preguntas frecuentes */
+
+.seccion-clara {
+    background: var(--fondo);
+}
+
+.preguntas-lista {
+    display: grid;
+    gap: 13px;
+}
+
+.preguntas-lista details {
+    padding: 19px 22px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
+.preguntas-lista summary {
+    color: var(--azul);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.preguntas-lista details p {
+    padding-top: 13px;
+    color: var(--texto-suave);
+}
+
+/* Seguridad */
+
+.rejilla-seguridad {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta-seguridad {
+    padding: 28px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.numero-seguridad {
+    display: inline-block;
+    color: var(--turquesa);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.tarjeta-seguridad h3 {
+    margin: 10px 0;
+    color: var(--azul);
+    font-size: 21px;
+}
+
+.tarjeta-seguridad p {
+    color: var(--texto-suave);
+}
+
+/* Nota académica */
+
+.nota-academica {
+    padding: 48px 0;
+    background: var(--azul-claro);
+}
+
+.nota-academica h2 {
+    color: var(--azul-oscuro);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.nota-academica p {
+    max-width: 850px;
+    color: var(--texto);
+}
+
+/* Pie de página */
+
+.pie-pagina {
+    padding: 30px 0;
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.pie-pagina p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #e0eaf5;
+}
+
+/* Adaptación a pantallas pequeñas */
+
+@media (max-width: 850px) {
+    .barra-navegacion {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 12px 18px;
+    }
+
+    .rejilla-tramites {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 58px 0;
+    }
+
+    .seccion {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    .rejilla-tramites,
+    .rejilla-seguridad {
+        grid-template-columns: 1fr;
+    }
+
+    .buscador-fila {
+        flex-direction: column;
+    }
+
+    .buscador-fila .boton {
+        width: 100%;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .tarjeta-tramite,
+    .tarjeta-seguridad {
+        padding: 21px;
+    }
+}
+
+/* Respeta las preferencias de movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}

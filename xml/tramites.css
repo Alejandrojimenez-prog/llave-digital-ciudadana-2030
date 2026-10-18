@@ -1,0 +1,46 @@
+
+tramites {
+    display: block;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    padding: 20px;
+}
+
+tramite {
+    display: block;
+    background-color: white;
+    margin: 15px 0;
+    padding: 20px;
+    border: 1px solid #d5deea;
+}
+
+nombre {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #174a78;
+    margin-bottom: 12px;
+}
+
+categoria,
+descripcion,
+requisitos,
+modalidad,
+url,
+palabrasClave {
+    display: block;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+categoria {
+    color: #236b57;
+    font-weight: bold;
+}
+
+url {
+    color: #075db5;
+}
+
+
+

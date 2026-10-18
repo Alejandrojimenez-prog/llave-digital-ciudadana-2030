@@ -1,0 +1,34 @@
+
+<?xml-stylesheet type="text/css" href="tramites.css"?>
+<tramites>
+    <tramite id="1">
+        <nombre>Crear una cuenta Llave MX</nombre>
+        <categoria>Identidad digital</categoria>
+        <descripcion>Consulta cómo crear una cuenta de identidad digital para acceder a los servicios públicos compatibles con Llave MX.</descripcion>
+        <requisitos>Consultar los datos y medios de contacto solicitados en el portal oficial.</requisitos>
+        <modalidad>En línea, conforme a las opciones disponibles en la plataforma oficial.</modalidad>
+        <url>https://www.llave.gob.mx/</url>
+        <palabrasClave>llave mx cuenta identidad digital registro</palabrasClave>
+    </tramite>
+
+    <tramite id="2">
+        <nombre>Consultar e imprimir la CURP</nombre>
+        <categoria>Identidad personal</categoria>
+        <descripcion>Permite consultar la Clave Única de Registro de Población y obtener su constancia mediante el portal oficial.</descripcion>
+        <requisitos>Contar con la CURP o proporcionar los datos personales que solicite el portal.</requisitos>
+        <modalidad>En línea. Consulta el portal oficial para conocer las opciones disponibles.</modalidad>
+        <url>https://www.gob.mx/curp/</url>
+        <palabrasClave>curp consulta imprimir constancia clave poblacion</palabrasClave>
+    </tramite>
+
+    <tramite id="3">
+        <nombre>Obtener el acta de nacimiento</nombre>
+        <categoria>Registro Civil</categoria>
+        <descripcion>Orienta sobre la consulta y obtención de una copia certificada del acta de nacimiento mediante el servicio oficial disponible.</descripcion>
+        <requisitos>Tener los datos de identificación que solicite la plataforma. Puede requerirse información adicional para localizar el acta.</requisitos>
+        <modalidad>En línea, cuando el acta esté disponible en el sistema. Los costos y las opciones pueden variar.</modalidad>
+        <url>https://www.gob.mx/ActaNacimiento/</url>
+        <palabrasClave>acta nacimiento registro civil copia certificada documento</palabrasClave>
+    </tramite>
+</tramites>
+
