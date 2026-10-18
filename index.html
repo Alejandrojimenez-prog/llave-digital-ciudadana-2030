@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal académico de orientación ciudadana para consultar trámites y servicios digitales de México.">
+    <title>Llave Digital Ciudadana 2030</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <!-- Encabezado del portal -->
+    <header class="encabezado">
+        <div class="contenedor barra-navegacion">
+            <a href="#inicio" class="marca">
+                <span class="icono-marca" aria-hidden="true">🔑</span>
+                <span>
+                    <strong>Llave Digital</strong>
+                    <small>Ciudadana 2030</small>
+                </span>
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#tramites">Trámites</a>
+                <a href="#preguntas">Preguntas frecuentes</a>
+                <a href="#seguridad">Seguridad</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Presentación -->
+        <section class="hero" id="inicio">
+            <div class="contenedor hero-contenido">
+                <span class="etiqueta">ORIENTACIÓN CIUDADANA DIGITAL</span>
+                <h1>Tus trámites digitales, más fáciles de comprender.</h1>
+                <p>
+                    Encuentra información básica sobre servicios digitales,
+                    conoce sus requisitos y accede a los portales oficiales
+                    con mayor confianza y seguridad.
+                </p>
+                <a class="boton" href="#tramites">Consultar trámites</a>
+                <p class="aviso">
+                    Proyecto académico independiente. No es un portal oficial
+                    del Gobierno de México.
+                </p>
+            </div>
+        </section>
+
+        <!-- Trámites -->
+        <section class="seccion contenedor" id="tramites">
+            <div class="encabezado-seccion">
+                <span class="etiqueta">SERVICIOS DIGITALES</span>
+                <h2>¿Qué trámite necesitas consultar?</h2>
+                <p>
+                    Busca un trámite y consulta su descripción, requisitos,
+                    modalidad de atención y enlace oficial.
+                </p>
+            </div>
+
+            <div class="buscador">
+                <label for="buscarTramite">Buscar por nombre o palabra clave</label>
+                <div class="buscador-fila">
+                    <input
+                        type="search"
+                        id="buscarTramite"
+                        placeholder="Ej. CURP, identidad, nacimiento"
+                        autocomplete="off"
+                    >
+                    <button type="button" id="limpiarBusqueda" class="boton boton-secundario">
+                        Limpiar
+                    </button>
+                </div>
+                <p id="estadoBusqueda" aria-live="polite">
+                    Cargando información de los trámites...
+                </p>
+            </div>
+
+            <div id="listaTramites" class="rejilla-tramites">
+                <p>Preparando información de los trámites...</p>
+            </div>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section class="seccion seccion-clara" id="preguntas">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="etiqueta">TE ORIENTAMOS</span>
+                    <h2>Preguntas frecuentes</h2>
+                    <p>Resuelve algunas dudas antes de iniciar un trámite digital.</p>
+                </div>
+
+                <div class="preguntas-lista">
+                    <details>
+                        <summary>1. ¿Qué es Llave MX?</summary>
+                        <p>
+                            Es un mecanismo de identidad digital que permite
+                            identificarse para acceder a servicios públicos
+                            digitales compatibles. Los servicios disponibles
+                            pueden variar según la institución.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>2. ¿Qué necesito para crear mi cuenta?</summary>
+                        <p>
+                            Consulta los requisitos vigentes en el portal oficial
+                            de Llave MX. Ten a la mano los datos y medios de
+                            contacto que solicite la plataforma.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>3. ¿Cómo puedo consultar mi CURP?</summary>
+                        <p>
+                            Ingresa al portal oficial de consulta de CURP y sigue
+                            las instrucciones para buscarla mediante los datos
+                            solicitados o tu clave, según corresponda.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>4. ¿Cómo puedo obtener mi acta de nacimiento?</summary>
+                        <p>
+                            Consulta el portal oficial correspondiente para
+                            verificar los datos requeridos, el procedimiento,
+                            los posibles costos y las opciones de descarga.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>5. ¿Cómo identifico un sitio web seguro?</summary>
+                        <p>
+                            Revisa cuidadosamente el dominio, comprueba que
+                            corresponda a la institución oficial y verifica que
+                            la conexión utilice HTTPS. El candado por sí solo
+                            no garantiza que un sitio sea legítimo.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seguridad digital -->
+        <section class="seccion contenedor" id="seguridad">
+            <div class="encabezado-seccion">
+                <span class="etiqueta">PROTEGE TU INFORMACIÓN</span>
+                <h2>Dos recomendaciones de seguridad</h2>
+                <p>Adopta hábitos que te ayuden a utilizar los servicios digitales.</p>
+            </div>
+
+            <div class="rejilla-seguridad">
+                <article class="tarjeta-seguridad">
+                    <span class="numero-seguridad">01</span>
+                    <h3>Verifica el sitio oficial</h3>
+                    <p>
+                        Escribe o comprueba cuidadosamente la dirección web.
+                        Evita entrar desde mensajes sospechosos y no compartas
+                        información personal en páginas que no puedas verificar.
+                    </p>
+                </article>
+
+                <article class="tarjeta-seguridad">
+                    <span class="numero-seguridad">02</span>
+                    <h3>Protege tus credenciales</h3>
+                    <p>
+                        Utiliza contraseñas únicas, activa medidas adicionales
+                        de seguridad cuando estén disponibles y nunca compartas
+                        tus contraseñas ni códigos de verificación.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Alcance académico -->
+        <section class="nota-academica">
+            <div class="contenedor">
+                <h2>Información clara para una ciudadanía digital</h2>
+                <p>
+                    Este prototipo tiene fines educativos. No realiza trámites,
+                    no autentica usuarios y no almacena datos personales.
+                    Los procedimientos oficiales pueden cambiar; verifica
+                    siempre la información directamente con la institución.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p><strong>Llave Digital Ciudadana 2030</strong></p>
+            <p>Prototipo académico · UCA Aplicaciones Web · UNRC</p>
+            <p>Consulta siempre las fuentes oficiales antes de realizar un trámite.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
